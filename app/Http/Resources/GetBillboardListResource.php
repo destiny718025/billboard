@@ -2,17 +2,8 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class GetBillboardListResource extends JsonResource
+class GetBillboardListResource extends BaseResource
 {
-    public function with($request)
-    {
-        return [
-            'code' => 200
-        ];
-    }
-
     /**
      * Transform the resource into an array.
      *

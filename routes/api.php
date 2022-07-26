@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\api\BillboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group([
     'prefix' => 'v1'
 ],  function () {
-    Route::apiResource('billboard', \App\Http\Controllers\BillboardController::class);
+    Route::apiResource('billboard', BillboardController::class);
 });
