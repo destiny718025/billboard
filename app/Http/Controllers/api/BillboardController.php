@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\api;
 
-use App\Http\Requests\BaseApiRequest;
 use App\Http\Requests\CreateBillboardRequest;
 use App\Http\Requests\UpdateBillboardRequest;
 use App\Http\Resources\BaseResource;
