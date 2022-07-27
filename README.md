@@ -25,7 +25,7 @@ Response:
 | id  | int | 公布欄編號 |
 | title  | string | 標題 |
 | body  | string | 內容 |
-| published  | boolean | 是否發布 |
+| announcer  | string | 公布者 |
 
 ```json
 {
@@ -34,13 +34,13 @@ Response:
             "id": 1,
             "title": "test",
             "body": "test",
-            "published": false
+            "announcer": "test"
         },
         {
             "id": 2,
             "title": "test1",
             "body": "sdfadfwer",
-            "published": true
+            "announcer": "billy"
         }
     ],
     "code": 200
@@ -59,7 +59,7 @@ Request:
 |  ----  | ----  | ----  | ----  |
 | title  | string | 必填 | 標題 |
 | body  | string | 必填 | 內容 |
-| published  | boolean | 非必填 | 是否發布 |
+| announcer  | string | 必填 | 公布者 |
 
 ```json
 {
@@ -96,7 +96,7 @@ Request:
 |  ----  | ----  | ----  | ----  |
 | title  | string | 必填 | 標題 |
 | body  | string | 必填 | 內容 |
-| published  | boolean | 非必填 | 是否發布 |
+| announcer  | string | 必填 | 公布者 |
 
 ```json
 {
@@ -134,4 +134,12 @@ Response:
     "data": [],
     "code": 200
 }
+```
+
+## 服務架構
+
+```
+api經由路由器判斷進入哪個控制器,再由控制器的方法觸發服務方法,主要的
+業務邏輯都會在服務層處理,服務層再去資料處理層取得資料,資料處理層主要
+在處理資料的拼裝,最後把結果返回給使用者
 ```
