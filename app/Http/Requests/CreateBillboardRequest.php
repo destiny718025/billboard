@@ -24,7 +24,7 @@ class CreateBillboardRequest extends BaseApiRequest
         return [
             'title' => 'required|string',
             'body' => 'required|string',
-            'published' => 'boolean'
+            'announcer' => 'required|string'
         ];
     }
 }

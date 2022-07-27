@@ -17,15 +17,6 @@ class Billboard extends Model
     protected $fillable = [
         'title',
         'body',
-        'published'
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'published' => 'boolean'
+        'announcer'
     ];
 }

@@ -33,7 +33,7 @@ class BillboardService
         $this->billboardRepo->create([
             'title' => $payload['title'],
             'body' => $payload['body'],
-            'published' => empty($payload['published']) ? 0 : 1
+            'announcer' => $payload['announcer']
         ]);
     }
 
@@ -44,7 +44,7 @@ class BillboardService
         ], [
             'title' => $payload['title'],
             'body' => $payload['body'],
-            'published' => empty($payload['published']) ? 0 : 1
+            'announcer' => $payload['announcer']
         ]);
     }
 

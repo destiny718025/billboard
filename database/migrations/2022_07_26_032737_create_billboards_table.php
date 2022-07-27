@@ -17,10 +17,8 @@ class CreateBillboardsTable extends Migration
             $table->id();
             $table->string('title', 128)->comment('標題');
             $table->text('body')->comment('內容');
-            $table->tinyInteger('published')->comment('是否發布 0:未發布 1:已發布');
+            $table->string('announcer', 64)->comment('公布者');
             $table->timestamps();
-
-            $table->index('published');
         });
     }
 

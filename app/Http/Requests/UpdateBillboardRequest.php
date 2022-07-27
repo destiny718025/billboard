@@ -26,7 +26,7 @@ class UpdateBillboardRequest extends FormRequest
         return [
             'title' => 'required|string',
             'body' => 'required|string',
-            'published' => 'boolean'
+            'announcer' => 'required|string'
         ];
     }
 }
